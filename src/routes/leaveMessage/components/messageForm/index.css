@@ -1,0 +1,17 @@
+.message{
+    width:100%;
+    resize:none;
+    line-height: 25px;
+    resize: none;
+}
+input{
+    height:30px;
+    border-radius:5px;
+    width:300px;
+    border:1px solid #999999;
+    padding-left:5px;
+}
+.formWrapper{
+    height:30px;
+    margin-top:10px;
+}

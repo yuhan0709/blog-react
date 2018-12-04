@@ -1,0 +1,17 @@
+.wrapper{
+    width:30%;
+}
+.wrapper img{
+    width:90%;
+}
+.listStyle{
+    width:90%;
+    margin-top:10px;
+    text-align: center;
+    font-weight: bold;
+}
+.footer{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}

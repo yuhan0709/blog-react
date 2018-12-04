@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pagination{
+    margin:0 auto;
+    margin-top:20px;
+}
+

@@ -1,0 +1,25 @@
+@keyframes focus{
+    0%{
+        width:30%;
+        opacity: 0.7;
+    }
+    100%{
+        width:33%;
+        opacity: 1;
+    }
+}
+.imgWrapper img{
+    width:30%;
+    opacity: 0.7;
+}
+.imgWrapper img:hover{
+    width:33%;
+    opacity: 1;
+    animation: focus 1s linear;
+}
+.cardWrapper{
+    opacity: 0.7;
+}
+.cardWrapper:hover{
+    opacity: 1;
+}

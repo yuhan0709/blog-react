@@ -1,0 +1,36 @@
+@keyframes showUp{
+    0%{
+        opacity: 0;
+        top:60%
+    }
+    60%{
+        opacity: 0.8;
+        top:30%;
+    }
+    100%{
+        opacity: 1;
+        top:40%;
+    }
+}
+.navWrapper{
+    display: flex;
+    justify-content: space-around;
+    width:40%;
+    margin:0 auto;
+    position: absolute;
+    top:40%;
+    left:30%;
+    padding:10px;
+    background-color:rgba(0,0,0, 0);
+    border:none;
+    animation: showUp 1.5s linear;
+}
+.navWrapper li{
+    list-style: none;
+    cursor: pointer;
+    
+}
+.navWrapper li img{
+    width:40px;
+    height:40px;
+}
