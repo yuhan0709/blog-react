@@ -1,0 +1,17 @@
+<%- include('../header.ejs') %>
+<div class="container">
+    <% comments.forEach((item)=>{ %>
+    <div class="list-group" data-id="<%=item._id %>">
+        <a href="#" class="list-group-item" style="margin-top:20px">
+            <h4 class="list-group-item-heading"><%= item.userName %></h4>
+            <span class="text-primary" style="font-size:12px;line-height:25px;"><%= item.mail %></span>
+            <p class="list-group-item-text" style="line-height:22px;letter-spacing:1px;"><%= item.comment %></p>
+            <br/>
+            <button class="btn btn-danger">删除</button>
+        </a>
+    </div>
+    <% }) %>
+</div>
+<script src="/js/utils.js"></script>
+<script src="/js/comment.js"></script>
+<%- include('../footer.ejs') %>

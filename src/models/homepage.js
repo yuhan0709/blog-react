@@ -1,5 +1,3 @@
-import { CALL_HISTORY_METHOD } from "react-router-redux";
-
 export default {
     namespace: 'homepage',
     state: {

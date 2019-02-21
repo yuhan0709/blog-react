@@ -1,0 +1,29 @@
+<%- include('../header') %>
+<div class="container">
+    <a href="/covers/newCover">
+        <button class="btn btn-primary">新增相册</button>
+    </a>
+    <div style="display:flex; flex-wrap:wrap">
+    <% data.forEach((item)=>{ %>
+        <div style="width:30%">
+            <div class="thumbnail">
+                <img src="<%= item.url %>" alt="<%= item.url %>">
+                <div class="caption" data-id="<%= item._id %>">
+                    <h3><%= item.title %></h3>
+                    <p><%= item.description %></p>
+                    <p>
+                        <a href="/covers/editCover/<%=item._id%>" class="btn btn-success" role="button">修改</a> 
+                        <a href="javascript:void(0)" class="btn btn-danger"
+                        role="button">删除</a>
+                        <label style="float:right" class="label label-info">
+                            <%= item.private?"仅自己可见":"公开" %>
+                        </label>
+                     </p>    
+                </div>
+            </div>
+        </div>
+    <% }) %>
+    </div>
+<script src="/js/utils.js"></script>
+<script src="/js/cover.js"></script>
+<%- include('../footer') %>

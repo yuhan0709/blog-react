@@ -1,6 +1,5 @@
 import dva from 'dva';
 import './index.css';
-import 'antd/dist/antd.less';
 import './assets/animate.css'
 import {createBrowserHistory as createHistory} from 'history';
 
@@ -14,7 +13,6 @@ const app = dva({
 
 // 3. Model
 app.model(require('./models/homepage.js').default);
-
 // 4. Router
 app.router(require('./router').default);
 

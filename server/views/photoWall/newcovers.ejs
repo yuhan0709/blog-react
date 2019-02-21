@@ -1,0 +1,32 @@
+<%- include('../header')%>
+<div class="container">
+    <div class="bg-info" style="padding:10px; margin:10px 0 30px 0;">新增相册</div>
+    <div class="row">
+        <div class="col-md-8 col-md-offest-2">
+            <form action="/covers/newCover" method="post">
+                <div class='form-group'>
+                    <label>相册题目：</label>
+                    <input class="form-control" name="title" />
+                </div>
+                <div class="form-group">
+                    <label>相册描述：</label>
+                    <input class="form-control" name="description" />
+                </div>
+                <div class="form-group">
+                    <label>相册封面：</label>
+                    <input class="form-control img" name="url" palceholder="请输入图片链接地址"/>
+                    <img src="http://pic2.16pic.com/00/20/02/16pic_2002642_b.jpg" style="width:150px;magrin-top:20px;" alt="暂无图片"/>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="private">私密
+                    </label>
+                </div>
+                <button class="btn btn-primary submit">确定</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/js/utils.js"></script>
+<script src="/js/newcover.js"></script>
+<%- include('../footer')%>

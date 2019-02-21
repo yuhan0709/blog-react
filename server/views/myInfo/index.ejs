@@ -1,0 +1,52 @@
+<%- include('../header')%>
+<div class="container">
+    <h3>我的简介：</h3>
+    <div class="tolk" style="padding:30px;background-color: rgba(0,0,0,0.1)">
+        <p style="line-height:25px;">
+            <%- info.value %>
+        </p>
+        <textarea class="form-control" rows=6 autofocus name="myTolk" data-id="<%= info._id %>">
+            <%= info.words.trim() %>
+        </textarea>
+        <br/>
+        <button class="btn btn-success">修改</button>
+        <button class="btn btn-primary">保存</button>
+        <button class="btn btn-info">取消</button>
+    </div>
+        <table class="table" style="margin-top:50px;text-align: center;">
+            <% skills.forEach((item)=>{ %>
+                <tr data-id='<%= item._id %>'>
+                    <td>
+                        <p><%= item.name %></p>
+                        <Input class="form-control" name="name" value='<%= item.name %>' disabled />
+                    </td>
+                    <td>
+                        <p><%= item.data %>%</p>
+                        <input class="form-control" name="data" value='<%= item.data %>' disabled />
+                    </td>
+                    <td>
+                        <button class="btn btn-success">修改</button>
+                        <button class="btn btn-danger">删除</button>
+                        <button class="btn btn-primary">保存</button>
+                        <button class="btn btn-info">取消</button>
+                    </td>
+                </tr>
+           <% }) %>
+            <tr>
+                <td>
+                    <Input class="form-control" name="name"/>
+                </td>
+                <td>
+                    <Input class="form-control" name="data"/>
+                </td>
+                <td>
+                    <button class="btn btn-primary new">新增</button>
+                    <button class="btn btn-primary save">保存</button>
+                    <button class="btn btn-info info">取消</button>
+                </td>
+            </tr>
+        </table>
+</div>
+<script src="/js/utils.js"></script>
+<script src="/js/myInfo.js"></script>
+<%- include('../footer') %>

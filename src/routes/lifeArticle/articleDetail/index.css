@@ -1,0 +1,17 @@
+.wrapper{
+    width:90%;
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding:40px 50px 20px 50px;
+    margin:0 auto;
+    box-shadow: 5px 5px 5px 5px #464646;
+    box-sizing: border-box;
+}
+.title{
+    color:#464646;
+    border-bottom:2px solid #464646;
+    margin-bottom:15px;
+}
+.container{
+    padding:0px 25px;
+}

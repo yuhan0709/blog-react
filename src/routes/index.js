@@ -4,7 +4,6 @@ import {Layout} from 'antd';
 import style from './index.css';
 import Menu from '../components/menu';
 import backimg from '../assets/headerpage.jpg';
-import { Z_FIXED } from 'zlib';
 const {Header,Content,Footer} = Layout;
 class IndexPage extends React.Component {
   render(){

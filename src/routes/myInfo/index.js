@@ -7,7 +7,7 @@ import {Animated} from 'react-animated-css';
 class MyInfo extends Component{
     render(){
         return(
-            <Animated animationIn="fadeIn" animationOut="zoomOutDown" animationInDelay ="2s" isVisible="true" style={{width:"100%"}}>
+            <Animated animationIn="fadeIn" animationOut="zoomOutDown" style={{width:"100%"}}>
             <div className={style.wrapper}>
                 <SampleInfo/>
                 <div className={style.more}>

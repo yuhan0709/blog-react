@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import style from './index.css';
 import * as echarts from 'echarts/src/echarts';
 import 'echarts/src/chart/bar';
-
-const option = {
+import axios from 'axios';
+var option = {
     title:{
         text:"技能储备",
         subtext:"2018-12-12"
@@ -31,7 +31,7 @@ const option = {
     },
     yAxis: {
         type: 'category',
-        data: ["HTML/HTML5","CSS/CSS3","JavaScript","es6","webpack/gulp","React大礼包","Vue","node"],
+        data: null,
         margin:"25px",
         axisLabel:{
             show:true,
@@ -53,15 +53,24 @@ const option = {
                 }
             },
             color:["#aaaaaa"],
-            data:[90,90,80,70,50,70,60,60]
+            data:null
         },
 
     ]
 }
 class Charts extends Component {
     componentDidMount(){
-        var myChart = echarts.init(document.getElementById('charts'),);
-        myChart.setOption(option);  
+        axios.get("/api/skills").then((res)=>{
+            if(res.data.code!==1){
+                alert("请求数据失败！请检查");
+            }else{
+                option.yAxis.data = res.data.obj.yAxis;
+                option.series[0].data = res.data.obj.xAxis;
+                console.log(option);
+            }
+            var myChart = echarts.init(document.getElementById('charts'),);
+            myChart.setOption(option);  
+        })
     }
     render() {
         return (

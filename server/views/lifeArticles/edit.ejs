@@ -1,0 +1,39 @@
+<%- include('../header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offest-2">
+            <form action="/lifeArticles/edit/<%=data._id%>" method="post">
+                <div class='form-group'>
+                    <label>文章标题：</label>
+                    <input class="form-control" name="title"  value="<%= data.title %>"/>
+                </div>
+                <div class="form-group">
+                    <label>发布时间：</label>
+                    <input class="form-control" type="date" value="<%= data.newdate %>" name="date" />
+                </div>
+                <div class="form-group">
+                    <label>标签：</label>
+                    <input class="form-control" value="<%=data.atype %>" name="atype" />
+                </div>
+                <div class="form-group">
+                    <label>文章简介：</label>
+                    <textarea class="form-control" name="description">
+                        <%= data.description %>
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cover">文章封面</label>
+                    <input  name="cover" id="cover" class="form-control" value="<%= data.cover%>">
+                    <img style="height:130px" src="<%= data.cover%>" >
+                </div>
+                <button class="btn btn-primary">确定</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $("#cover").change(function(){
+        $(this).siblings('img').attr("src",$(this).val());
+    })
+</script>
+<%- include('../footer.ejs')%>;

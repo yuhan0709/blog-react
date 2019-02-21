@@ -1,0 +1,29 @@
+<%- include('../header.ejs') %>
+<div class="container">
+    <button class="btn btn-primary">新增分享</button>
+    <div class="list-group">
+        <% data.forEach((item)=>{ %>
+             <div class="list-group-item" style="display: flex; margin-top:20px">
+                <div style="padding:0 10px;min-width:70%;">
+                        <h4 class="list-group-item-heading"><%= item.title%></h4>
+                        <br />
+                        <p style="padding-left:10px; color:#41464b"class="list-group-item-text"><%= item.description %></p>
+                        <br />
+                        <div style="float: left;">
+                            <span class="label label-primary"><%= item.atype %></span>
+                        </div>
+                    <div style="float:right;">
+                        <button class="btn btn-success" onClick="editItem('<%= item._id %>')">修改</button>
+                        <button class="btn btn-danger" onClick="deleteItem('<%= item._id %>')">删除</button>
+                    </div>
+                </div>
+                <div style="width:30%">
+                    <img src="<%= item.cover %>" style="height:130px; float:right" alt="example" />
+                </div>
+            </div>
+        <% }) %>    
+    </div>
+</div>
+<script src="/js/utils.js"></script>
+<script src="/js/studyShare.js"> </script>
+<%- include('../footer.ejs') %>
